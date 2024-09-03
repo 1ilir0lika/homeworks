@@ -1,0 +1,124 @@
+---
+title: "Le cellule staminali"
+author: "Ilir Lika"
+date: "`r Sys.Date()`"
+institute: "IVB"
+output:
+    bookdown::epub_book:
+      number_sections: false
+      toc: true
+bibliography: references.bib
+nocite: '@*'
+---
+
+## Introduzione
+
+>*Le cellule staminali sono cellule non specializzate presenti in tutti gli organismi viventi [...]*\
+>*La definizione di cellula staminale si basa essenzialmente su due caratteristiche:*
+>
+>*a) autorinnovamento, ossia la capacità di generare una cellula indifferenziata esattamente uguale alla cellula-madre attraverso numerosi cicli cellulari*
+>
+>*b) potenza, vale a dire la capacità di differenziarsi in tipi cellulari specializzati*
+
+da [Treccani](https://www.treccani.it/enciclopedia/cellule-staminali_(XXI-Secolo)/)
+
+Come si puó intuire delle cellule con delle potenzialitá simili hanno dei riscontri importanti per quanto concerne le possibili cure nel nostro futuro oltre che nel dibattito pubblico,proprio per questo ritengo importante scrivere questo libro.
+
+### la gerarchia delle cellule staminali
+
+La cellula staminale per eccellenza é lo **zigote**,questa é in grado di formare un intero organismo vivente.\
+Infatti nella definizione di cellula staminale ho accennato la **potenza**,non tutte le cellule staminali hanno
+ la stessa potenza,potremmo quasi fare una gerarchia di quest'ultime:
+
+<img align="right" src="https://www.scq.ubc.ca/wp-content/uploads/2006/07/stemcells2-GIF.gif">
+
+1. la **totipotenza** è la capacità di generare tutti i tessuti embrionali ed extraembrionali, tipica delle cellule della morula 
+2. la **pluripotenza** è la capacità di differenziarsi in tutti i tessuti embrionali, tipica delle cellule staminali embrionali 
+3. la **multipotenza** è la capacità di differenziare in tutti i tipi cellulari di un foglietto germinativo (endoderma, mesoderma o ectoderma)
+4. l’**unipotenza** è la capacità di differenziarsi in un unico tipo cellularea tipico dei progenitori
+
+## le cellule staminali embrionali
+
+Le cellule staminali
+embrionali si trovano in embrioni a uno stadio
+molto immaturo dello sviluppo. Possono
+essere estratte dall’embrione allo stadio di
+**blastocisti** e coltivate in laboratorio
+sotto forma di linee cellulari che si moltiplicano
+ indefinitamente.
+Cellule staminali embrionali possono essere ricavate anche da embrioni ottenuti mediante
+la tecnica della clonazione o trasferimento nucleare
+
+I ricercatori ritengono particolarmente attraenti le qualitá delle cellule pluripotenti,sfortunatamente peró effettuare studi su quest'ultime comporta il disfacimento 
+degli embrioni umani,molte persone associano questo ad uccidere una persona in quanto potenzialmente quell'embrione lo sarebbe potuto diventare,
+sebbene non é cosí tanto semplice stabilire una linea tra l'essere vivente o meno 
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/W7a5XR9nwAM/0.jpg)](https://www.youtube.com/watch?v=W7a5XR9nwAM) \
+ecco un video youtube che approfondisce il dibattito in merito.
+
+Diversi sostengono che l'embrione,o addirittura lo zigote,date le sue proprietá intrinsiche che gli permettono di formare un intero organismo,equivalga all'organismo stesso,come se il seme di una pianta fosse la pianta stessa.\
+Quest'idea aristotelica ignora tutti gli altri fattori che compongono l'individuo quali,riprendendo l'esempio della pianta,possono essere i sali minerali,la luce ed un terreno sul quale crescere.\
+Associare l'embrione ad un organismo umano completo significa associare la possibilitá di un atto all'atto stesso ignorando tutto il circostante,
+tanto vale allora dire che 2 esseri della stessa specie di sesso diverso in grado di riprodursi sono un organismo a loro volta perché in loro risiede l'atto dell'uomo.
+
+## l'esperimento di Yamanaka e le cellule staminali indotte
+
+È il 2006 quando il ricercatore giapponese Shinya Yamanaka, 
+
+![](https://www.ucsf.edu/sites/default/files/Yamanaka-pipette.jpg)
+
+scopre un metodo per fare “ringiovanire” delle cellule 
+prelevate dal tessuto sottocutaneo
+di un topo, ottenendo cellule simili alle
+staminali pluripotenti presenti nell’embrione.
+Queste cellule staminali, prodotte
+artificialmente in laboratorio, sono state
+definite cellule staminali pluripotenti
+indotte o cellule iPS (dall’inglese induced Pluripotent Stem).\
+Per far ció é stato necessario sfruttare un virus artificiale che ha fatto da vettore di 4 geni 
+funzionali alla riprogrammazione di queste cellule,cosí facendo si puó lavorare con delle cellule pluripotenti senza distruggere degli embrioni 
+diminuendo anche la possibilitá di rigetto quando queste cellule dalle quali si formano le iPS provengono direttamente dal paziente stesso.\
+sfortunatamente quest'ultime non sono ancora pronte per l'utilizzo di massa in quanto rimangono ancora diverse sfide di affrontare,come la possibilitá che queste si tramutino 
+in cellule tumorali
+
+## Il lato oscuro delle staminali 
+
+>*Some day, stem cells will be enlisted to help repair or replace damaged tissues and organs. They will rescue us from diseases for which drugs can only treat the symptoms. But they may have another role in our lives, one that is not so beneficial. They may in fact be the source of some, and possibly most cancers*\
+da [HSCI](https://hsci.harvard.edu/stem-cells-and-cancer)
+
+Le cellule staminali del nostro corpo si occupano
+di rinnovare costantemente i tessuti e/o di rigenerarli in caso di danni. Allo stesso modo, le cellule
+staminali del cancro potrebbero produrre
+continuamente le cellule tumorali e rigenerare il
+tumore dopo che questo ha subìto un danno, per
+esempio in seguito alla chemioterapia.
+Le prime cellule staminali tumorali sono state
+scoperte nei tumori del sangue (leucemie) e sono
+state riconosciute per la loro caratteristica di ricreare 
+la leucemia umana nei topi da laboratorio.\
+Sono delle cellule presenti solitamente in piccola quantità all’interno di un tumore, che hanno tre principali caratteristiche:
+1. sono indispensabili per la crescita del tumore perché generano tutte le altre
+cellule tumorali.
+2. sono molto resistenti ai farmaci antitumorali: spesso sopravvivono alla chemioterapia e riformano il tumore dopo mesi o anni.
+3. sono responsabili della formazione di metastasi, cioè della disseminazione del tumore in altre parti del corpo.
+
+### Perché sono importanti?
+
+Queste sono le cellule generatrici del tumore,per eliminare quest'ultimo é necessario eliminare queste e non le cellule figlie.\
+Sono frutto della mutazione di staminali del tessuto stesso oppure provengono da un particolare tipo di cellule chiamate progenitori,le stesse cellule unipotenti introdotte ad [inizio libro](#la-gerarchia-delle-cellule-staminali),
+Queste sono i primi discendenti delle cellule staminali e possiedono una grande capacità di dividersi ma contrariamente
+alle staminali dopo un certo tempo muoiono. Se una cellula progenitrice va incontro a trasformazione maligna può acquisire l’immortalità e diventare a tutti gli effetti
+una cellula staminale tumorale.
+
+### come riconoscerle da cellule staminali normali
+
+Le cellule staminali tumorali sono pressoché identiche a quelle non tumorali se non per la presenza di alcune proteine sulla membrana della cellula chiamate marcatori di membrana,peró 
+questi sono generalmente presenti anche su quelle normali quindi non é cosí tanto semplice distinguere le une dalle altre.
+Le staminali tumorali vengono anche riconosciute per la loro proprietà di espellere velocemente
+alcune sostanze chimiche o per la presenza di particolari enzimi.
+
+![](immagini/StemCellsCancerSCL2.png)
+
+# Bibliografia
+
+<div id="refs"></div>
