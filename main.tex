@@ -1,0 +1,286 @@
+\documentclass[12pt]{article}
+\usepackage[italian]{babel}
+\usepackage{natbib}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{advdate}
+\usepackage[dayofweek]{datetime}
+\usepackage{array,longtable}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage[table]{xcolor}
+\usepackage{vmargin}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{Relazione sulla stazione metereologica}								
+\author{Ilir Lika}								
+\date{\today}											
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+    \includegraphics[scale = 0.70]{logo.jpg}\\[1.0 cm]	
+    \textsc{\LARGE Istituto Maria Immacolata}\\[2.0 cm]	
+	\textsc{\Large II B}\\[0.5 cm]			
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries \thetitle}\\
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+	
+	
+		
+			\Large{\emph{Studente:}\\
+			\theauthor}\\[2 cm]
+		
+	
+	{\large \thedate}\\[2 cm]
+ 
+	\vfill
+	
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{prefazione}
+Questo esperimento è stato un modo per poter mettere in pratica le nostre conoscenze teoriche sul metodo scientifico : ne abbiamo potuto provare la parte più concreta ovvero la realizzazione dell'esperimento per falsificare la nostra tesi,in questo caso non siamo partiti da alcuna tesi,era solamente una raccolta di dati,e quindi i nostri risultati saranno fini a se stessi perchè non verranno pubblicati da nessuna parte,però resta pur sempre un'esperienza interessante siccome possiamo in minima parte ideare anche noi l' esperimento per far si che sia il più preciso e rappresentativo possibile.
+\section{le misurazioni}
+Siccome la scienza non si basa su opinioni,ma su fatti,per ricavare questi fatti è necessario effettuare molteplici misurazioni e,per mezzo della statistica(il fatto che venga utilizzata la probabilità non significa che la scienza sia sbagliata,semplicemente cerca di ricavare delle \textbf{leggi fisiche ed universali},ovvero una regolarità della natura descrivibile in forma matematica che è sempre vera per tutti i fenomeni dello stesso tipo ed ovunque,tali da poter fare delle previsioni sul futuro,ma la scienza,come tutto,ha dei margini d'errore e per ridurli al minimo si fa ricorso alla statistica) si elaborano i dati per trarre delle conclusioni.\\
+In questo caso i dati son stati presi a Villar Perosa
+(44.92°N 7.25°E,530m slm).
+\subsection{gli strumenti}
+Una misurazione deve essere sia precisa che accurata e per permetterlo è necessario evitare qualunque tipo di errore,migliorando il metodo e anche gli strumenti e ripetendo molte volte le misurazioni diminuendo gli errori statistici.
+Ogni strumento è caratterizzato da :
+\begin{itemize}
+    \item una portata: la massima misura che può esser misurata con lo strumento
+    \item una sensibilità: la minima variazione della grandezza rilevabile dallo strumento
+\end{itemize}
+\vspace{2cm}
+\subsubsection{barometro}
+Questo strumento è particolarmente soggetto ad un errore sistematico chiamato parallasse\footnote{Errore provocato dall'illusione dello spostamento di un oggetto causato dal cambiamento dell'angolo dalla quale lo si osserva} quindi ho preferito tenere un alto errore assoluto anche se non ho potuto misurare alcuna variazione della pressione probabilmente perchè il palloncino era troppo grande e quindi sarebbe stato necessario un aumento della pressione molto più significativo oppure è semplicemente un caso siccome ho fatto relativamente poche misurazioni e non posso quindi affermarlo con certezza.\\ \\
+    \includegraphics[scale=0.2]{barometro.jpg} \\ \\
+   \rowcolors{2}{gray!10}{gray!40}
+   \begin{tabular}{|c|S|}
+    \hline
+    Sensibilità & 1mm \\
+    \hline
+    Portata & 15cm\\
+    \hline
+\end{tabular}
+\subsubsection{anemoscopio}
+Per utilizzare questo strumento è necessario verificare che la  rosa dei vendi corrisponda effettivamente ai giusti punti cardinali e per far ciò è sufficiente utilizzare una bussola che dovrebbe puntare al campo magnetico e quindi al polo Nord oppure un comune telefono sfruttando il gps.\\
+La forma di questo strumento è funzionale al suo utilizzo siccome la parte inferiore dell'anemoscopio e la freccia sfruttano la loro superficie per aumentare l'attrito viscoso creato dalla densità dell'aria.\\
+    \includegraphics[scale=0.2]{anemoscopio.jpg} \\ \\
+   \rowcolors{2}{gray!10}{gray!40}
+   \begin{tabular}{|c|S|}
+    \hline
+    Sensibilità & $\sim$ 45$^{\circ}$\\
+    \hline
+    Portata & 360$^{\circ}$\\
+    \hline
+\end{tabular}\\\\
+Ho aggiungo $\sim$ siccome alla fine ho preferito indicare nella tabella i gradi e non la direzione stimandoli ad occhio.
+\subsubsection{anemometro}
+\begin{wrapfigure}{r}{6cm}
+        \centering
+        \includegraphics[scale=0.18]{anemometro.jpg}
+\end{wrapfigure}
+La misura della velocità si esprime con la formula
+$$v=\dfrac{s}{t}$$
+dove $v$ è la velocità,$s$ lo spazio e $t$ il tempo,per queste misurazioni misurerò in giri al minuto,i giri ovviamente non sono una misura standard però è possibile dato il raggio dell'anemometro convertire questa grandezza in m/s.
+Questa misura terrà conto sia dell'errore del timer che di quello provocato dell'anemometro.I due errori relativi siccome è una divisione si dovranno sommare per dare il nuovo errore relativo: \\
+$\varepsilon_p=\varepsilon_a + \varepsilon_b$
+\subsubsection{l'igrometro ed il termometro}
+siccome qui avevamo libera scelta su quali strumenti usare ho scelto di utilizzare un "microcontrollore" chiamato esp8266,che poi ho collegato ad un sensore dell'umidità e della temperatura(dht11).
+\paragraph{perchè l'ho fatto?} 
+Semplicemente perchè trovo che offra molti vantaggi quali :
+\begin{itemize}
+    \item monitorare con maggiore precisione il tempo siccome posso fare molte più misurazioni di quante ne avrei potute fare utilizzando un normale termometro
+    \item automatizzare fa risparmiare tempo nel lungo tempo,perchè sommando questi minuti che avrei dovuto usare tutti i 15 giorni sarei arrivato anche ad un ora o più
+    \item è stata un'opportunità per imparare cose che non avrei potuto imparare facendo il tutto manualmente
+    \item è una soluzione scalabile che mi permetterebbe di fare misurazioni anche per tempi molto lunghi
+    \item è molto più preciso di quanto io lo sarei potuto essere
+    \item permette di monitorare il tempo anche se non si è a casa
+    \item onestamente l'ho trovato molto più divertente e stimolante di farlo in modo "normale"
+\end{itemize}
+\paragraph{perchè ho scelto questi materiali?} 
+Onestamente disponevo di un sensore migliore,ma ho volutamente scelto questo perchè quello più economico e quindi chiunque riuscirebbe a replicare ciò che ho fatto spendendo quanto se non di meno di quanto avrebbe speso per un comune termometro.\\
+Inoltre ho scelto di utilizzare la breadboard\footnote{É quella tavola che permette di fare collegamenti elettrici senza bisogno di saldare il circuito o addirittura di usare dei conduttori ad esempio dei fili di rame} e non di saldare perchè permette in un secondo momento di staccare tutti i moduli e di riutilizzare il microcontrollore per altri progetti ed anche perchè risulta molto meno spaventoso alle persone che non hanno mai avuto a che fare con questi esperimenti più pratici
+\paragraph{come funziona?}
+Il funzionamento è molto semplice :  il sensore rileva i dati che poi il microcontrollore manda,sfruttando la mia connessione wifi,su una chat telegram\footnote{telegram è un applicazione di messaggistica istantanea,però a differenza di whatsapp offre dei mezzi : le api per permettere ad un programma di mandare messaggi e fare molte altre cose} che poi scarico ed analizzo,per trovare la media ed i valori minimi e massimi della temperatura e dell'umidità di ogni giorno.
+\paragraph{come costruirlo}
+mi sembra necessario specificarlo siccome non c'è un enorme documentazione in giro e quella che c'è non è in italiano,costruirlo è semplicissimo : come si può vedere dalla foto sono bastati 3 collegamenti,altri sensori o comunque moduli che si possono aggiungere ne possono richiedere molti di più e se si usa arduino potrebbero servire anche dei resistori(e per capire quali utilizzare si dovrebbe applicare una formula descritta dal fisico Ohm,quindi potrebbe risultare meno immediato) per questo penso che sia uno dei progetti più semplici da fare per iniziare,inoltre l'esp8266 utilizza soltanto 3v quindi è un bene alimentarlo o con delle batterie a 3v oppure come ho fatto io con un powerbank che però deve dare in uscita 3v,altrimenti l'energia in eccesso,per via della presenza di resistori,avrà una difficoltà a passare provocata dalla resistenza elettrica\footnote{la resistenza elettrica è quella proprietà che definisce la capacità di un oggetto di opporsi al passaggio di corrente} e quindi si trasformerà in calore e quindi dopo 15 giorni il chip diventerà incandescente cosa non particolarmente ottimale se si vuole poterlo usare ancora in futuro.\\
+Successivamente è necessario programmarlo,l'esp di default utilizza il c,ma volendo si possono utilizzare altri linguaggi di programmazione come ad esempio rust.
+\\ \\
+    \includegraphics[scale=0.2]{esp.jpg} \\ \\
+   \begin{tabular}{|c|c|S|}
+    \hline
+      \cellcolor{red!30}Termometro & Sensibilità & 1\% \\
+    \hline
+   \cellcolor{red!30}Termometro &  Portata &  100\% \\
+    \hline
+    \cellcolor{blue!30} Igrometro & Sensibilità & 1$^{\circ}$C \\
+    \hline
+   \cellcolor{blue!30} Igrometro & Portata & 50$^{\circ}$C\\
+    \hline
+\end{tabular}
+\subsubsection{pluviometro}
+La funzione del pluviometro è quella di misurare la pioggia,e per farlo guarda i millimetri di pioggia presenti in un contenitore.Io ho utilizzato una bottiglia dalla capacità di un litro e mezzo,quindi il suo diametro era molto alto rispetto ai normali pluviometri molto più sensibili,quindi le mie misurazioni saranno nettamente inferiori a quelle fatte con un pluviometro che rispetta le misure standar.
+\includegraphics[width=10cm]{pluviometro.jpg}
+ \begin{tabular}{|c|S|}
+    \hline
+    Sensibilità & 1mm\\
+    \hline
+    Portata & 15cm\\
+    \hline
+\end{tabular}
+\section{i risultati}
+L'uomo non è capace di immaginare numeri grandi semplicemente perchè non era un qualcosa di necessario per la sua sopravvivenza,tutti gli animali hanno una percezione dei numeri(intesi come modo per indicare una quantità) perchè dal punto di vista evolutivo è necessario per la sopravvivenza : se un lupo può scegliere tra mangiare una sola preda o un branco tendenzialmente sceglierà il branco,poi altri animali hanno un astrazione tale da poter fare cose molto più complesse come mostrato in questi 2 articoli \cite{animali,api}.Nonostante questo l'uomo non riesce a concepire numeri troppo grandi solamente leggendoli,quindi per rendere i dati più efficaci son nati i grafici che sono appunto delle rappresentazione grafiche per dare un idea della grandezza dei dati(molto spesso per sfortuna le persone anche coi grafici non riescono comunque a rendersi conto dell'esperimento fatto perchè il cervello umano non è razionale,ma è molto emotivo,quindi una semplice storia,anche finta,riesce a persuadere molto più dei dati ecco un link con una serie di articoli a riguardo : https://wakelet.com/wake/47d29d7e-579a-4a67-85a6-b14ffae6baa9).
+\section{come ho realizzato i grafici}
+per realizzare i grafici ho utilizzato R : un linguaggio di programmazione utilizzato per \emph{computazioni statistiche},nel mio caso non era necessario utilizzarlo,tranne per il grafico radar,perchè avrei potuto utilizzare ad esempio excel,però così facendo ho potuto non dover compilare le tabelle a mano e avere una maggiore libertà sulle scale e sul come venivano fatti i grafici,nello specifico ho utilizzato fmsb per il grafico radar e ggplot2 per tutti gli altri.
+\subsection{barometro}
+Il mio barometro non era sufficientemente sensibile da rilevare alcuna variazione,però se dovessi fare un grafico utilizzerei un istogramma con barre d'errore(molto grandi siccome ha una sensibilità così bassa).
+La sensibilità del righello è di un millimetro,ma quella del palloncino è molto maggiore,potrei teoricamente calcolarla guardando quanto si espande mettendo una determinata quantità d'aria nel contenitore però posso anche dedurla guardando le previsioni e vedendo le massime variazioni della pressione avvenuta in questi 15 giorni,questo metodo non è perfetto perchè così facendo non rileverei l'effetiva sensibilità ma una sua sottostima(comunque quando il palloncino veniva teso di più si rompeva).
+\newcount\fooo
+\long\def\addto#1#2{\expandafter\def\expandafter#1\expandafter{#1#2}}
+    \SetDate[22/08/2022]
+    \newcounter{mycntr}
+    \def\tabledata{} \fooo=15
+    \loop
+   \addto\tabledata{\AdvanceDate[\value{mycntr}]\today\stepcounter{mycntr} & 0\\
+    \hline}
+    \advance \fooo -1
+    \ifnum \fooo>0
+    \repeat \\
+    \includegraphics[width=6cm]{barometrograph.pdf} \\
+Il grafico è una serie di misurazioni nulle con delle grandi barre d'errore.
+    \begin{longtable}{|c|c|}
+       \hline
+       data & mm \\
+       \hline
+        \tabledata
+    \end{longtable}
+\subsection{anemoscopio}
+per rappresentare questi dati ho scelto di utilizzare un grafico radar,siccome ho scelto di indicare i gradi e non direttamente la direzione ho dovuto calcolare le componenti cartesiane e poi fare delle proporzioni per trasformarli in percentuale.
+\includegraphics[width=8.9cm]{radar.pdf} 
+\begin{tabular}{|c|c|}
+    \hline
+    data & gradi \\
+    \hline
+     08/22 &  -5\\
+     08/23 &  -9\\
+     08/24 &  90\\
+     08/25 &  120\\
+     08/26 &  90\\
+     08/27 &  180\\
+     08/28 &  180\\
+     08/29 &  -20\\
+     08/30 &  -40\\
+     08/31 &  128\\
+     09/01 &  -2\\
+     09/02 &  130\\
+     09/03 &  150\\
+     09/04 &  87\\
+     09/05 &  10\\
+     \hline
+\end{tabular} \\
+\subsection{anemometro}
+Per rappresentare questi dati ho utilizzato un istogramma con le barre d'errore.
+\includegraphics[width=8cm]{anemometro.pdf} \\\\
+\begin{tabular}{|c|c|}
+    \hline
+    data & gpm \\
+    \hline
+     08/22 &  0,5\\
+     08/23 &  0\\
+     08/24 &  0,3\\
+     08/25 &  0,3\\
+     08/26 &  1\\
+     08/27 &  0,3\\
+     08/28 &  0\\
+     08/29 &  0\\
+     08/30 &  0,3\\
+     08/31 &  0,5\\
+     09/01 &  0,3\\
+     09/02 &  0\\
+     09/03 &  0,3\\
+     09/04 &  1\\
+     09/05 &  0,5\\
+     \hline
+\end{tabular} \\
+\subsection{pluviometro e termometro}
+Per questi 2 strumenti ho scelto un grafico climatico\\
+\includegraphics[width=10cm]{climatico.pdf} \\
+\begin{tabular}{|c|c|c|}
+    \hline
+    data & C & mm \\
+    \hline
+     08/22 &  26.7 & 0\\
+     08/23 &  23.7 & 0\\
+     08/24 &  22.8 & 0\\
+     08/25 &  22.2 & 0\\
+     08/26 &  19.8  & 2\\
+     08/27 &  26.6 & 3\\
+     08/28 &  21.8 & 3\\
+     08/29 &  23.3 & 4\\
+     08/30 &  23.3 & 3\\
+     08/31 &  20.7 & 2\\
+     09/01 &  19  & 0\\
+     09/02 &  27 & 1\\
+     09/03 &  25 & 1\\
+     09/04 &  23  & 0\\
+     09/05 &  22  & 0\\
+     \hline
+\end{tabular} \\
+se dovessi provare ad inferire da questo grafico il clima della mia regione dovrei,come ho fatto nel grafico,aumentare la scala delle precipitazioni perchè come ho detto prima il diametro del mio igrometro era relativamente molto grande e poi stabilire l'effettivo clima anche se ovviamente 15 giorni non sono affatto sufficienti,ma dovrei fare misurazioni per almeno 10 anni.\\
+il clima della mia regione potrebbe essere,dato le alte temperature(le temperature indicate sono la media di tutte le misurazioni sia di giorno che di notte ed ho raggiunto anche 42.5C) e le leggere precipitazioni(il grafico mostra un massimo di 4mm di pioggia) un clima continentale
+\subsection{igrometro}
+ho fatto come per l'anemometro ed ho utilizzato un istogramma con le barre d'errore. \\
+\includegraphics[width=10cm]{igrometrograph.pdf} 
+\begin{tabular}{|c|c|}
+    \hline
+    data & \% \\
+    \hline
+     08/22 &  46,7\\
+     08/23 &  52,0\\
+     08/24 &  53,3\\
+     08/25 &  67,4\\
+     08/26 &  53,5\\
+     08/27 &  71,4\\
+     08/28 &  63,3\\
+     08/29 &  66,1\\
+     08/30 &  68,8\\
+     08/31 &  79,3\\
+     09/01 &  74,9\\
+     09/02 &  74,3\\
+     09/03 &  79,2\\
+     09/04 &  70,2\\
+     09/05 &  68,4\\
+     \hline
+\end{tabular} \\
+\newpage
+\bibliographystyle{plain}
+\bibliography{biblist}
+\nocite{*}
+\end{document}
