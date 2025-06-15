@@ -1,1 +1,1 @@
-Here are some of my Markdown homeworks for school
+Here are some of my homeworks made in markdown or latex for school
