@@ -1,0 +1,131 @@
+\documentclass[a4paper]{article}
+\usepackage[margin=2cm]{geometry}   
+
+\usepackage{paracol} % added <<<<<<<<<<<<<<<<<<<<<
+\usepackage{tcolorbox}
+
+\usepackage{lipsum}% generate filler text 
+
+\newcommand{\question}[1]{% Ask the question
+    \begin{tcolorbox}[colback=red!05,colframe=red!25,sidebyside align=top,width=\linewidth,before skip=1ex]
+        #1
+        
+    \end{tcolorbox}%    
+    \switchcolumn % now write in the right column   
+}
+
+\newcommand{\note}[1]{% Add as many notes as you like
+    \begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\linewidth,before skip=1ex]
+        #1
+    \end{tcolorbox}         
+}   
+
+\newcommand{\summary}[2][]{%
+\begin{minipage}[b]{\textwidth}
+    \vspace*{\baselineskip}
+    \begin{tcolorbox}[colframe=green!50!blue!80,fonttitle=\large\bfseries\sffamily,
+        after skip = \baselineskip,
+        title=Riassunto]
+        #2
+    \end{tcolorbox}
+\end{minipage}
+#1}
+
+
+\setcolumnwidth{0.40\textwidth/20pt,0.60\textwidth}% column separation =20pt
+\setlength{\columnseprule}{3pt} % column width
+\colseprulecolor{red}
+
+\title{%
+        \begin{tcolorbox}[before skip = -\baselineskip, after skip =-\baselineskip]
+            \centering\Huge\sffamily Il DNA   
+        \end{tcolorbox}
+}
+
+\date{}
+\parindent=0pt
+
+\begin{document}
+    
+\maketitle  
+
+\section{Introduzione}
+
+\begin{paracol}{2}
+\question{Che cos'é Il DNA?}
+\note{Il DNA contiene tutte le istruzioni necessarie per sintetizzare le cellule di un dato organismo}
+\note{é come una lingua universale fatta solo dalle lettere A,T,G,C}
+\note{é a forma di scala a chiocciola}
+\note{per comprendere questa lingua si sfrutta il \textbf{codice genetico} che associa ad ogni sequenza di 3 lettere(un codone) un amminoacido $\rightarrow$ unitá delle proteine}
+\end{paracol}
+
+\begin{paracol}{2}  
+    \question{Dov'é contenuto il DNA?}
+    \note{\begin{itemize}
+    \item procarioti $\rightarrow$ filamenti circolari di DNA
+    \item eucarioti $\rightarrow$ cromosomi
+\end{itemize}
+\includegraphics[width=0.7\textwidth]{Karyotype.jpg}\\
+foto del cariotipo umano dove si possono vedere i suoi cromosomi
+}
+\end{paracol}
+\begin{paracol}{2}
+\question{Che cos'é il genoma?}
+\note{\textit{L'intera informazione genetica che caratterizza ogni organismo vivente, codificata dal DNA si chiama \textbf{genoma}}}
+\end{paracol}
+\begin{paracol}{2}
+    \question{Complessitá di un organismo}   
+    \note{il numero di cromosomi non é associato ad una maggiore complessitá di un organismo,una cipolla ha piú di cinque volte il nostro DNA nelle proprie cellule}
+\end{paracol}
+\begin{paracol}{2}
+    \question{Che cos'é un gene?}
+    \note{Un gene é una sezione di DNA che codifica per un prodotto funzionale(generalmente una \textbf{proteina})}
+    \note{le diverse possibili "versioni" dello stesso gene si chiamano \textbf{allele}}
+    \note{ogni caratteristica di un organismo si chiama \textbf{tratto}}
+\end{paracol}
+\summary{Il DNA contiene tutte le informazioni di un organismo vivente.Viene organizzato in cromosomi}
+\section{Non tutto il DNA contiene istruzioni per sintetizzare proteine}
+\begin{paracol}{2}
+\question{Junk DNA}
+\note{nell'uomo solo il 2\% del DNA é composto da geni,il resto non ha alcuna funzione $\rightarrow$ \textbf{junk DNA}}
+\note{\begin{itemize}
+    \item procarioti $\rightarrow$ quasi assente
+    \item eucarioti $\rightarrow$ piú del 90\% del DNA
+\end{itemize}
+\includegraphics[scale=1.4]{The-percentage-of-protein-coding-genes-sequences-in-several-eukaryotic-and-bacterial.png}\\
+un diagramma con le percentuali del DNA codificante in diversi organismi
+}
+\note{il 25\% dei geni non codificanti si trovano dentro altri geni $\rightarrow$ \textbf{introni}}
+
+\end{paracol}
+\begin{paracol}{2}
+\question{perché esiste?}
+\note{puó servire a permettere a delle sequenze del DNA di fare copie di se stesse e di muoversi nel genoma}
+\note{sono frammenti di geni o pseudogeni che si sono formati da dei geni veri,ma accumulando troppe mutazioni non sono piú in grado di codificare proteine}
+\note{non si é certi delle loro funzioni}
+\note{recentemente si ha riscontrato che sintetizzano porzioni piccole di RNA che fungono da "switch" per regolare l'espressione genica}
+\note{potrebbe anche essere una riserva per delle sequenze potenzialmente utili}
+\end{paracol}
+\summary[\clearpage]{la maggior parte del nostro genoma é fatto da junk DNA,questo non sintetizza alcuna proteina}
+\section{Come funzionano i geni?}
+\begin{paracol}{2}
+        \question{genotipo}
+        \note{i geni che codificano per un particolare tratto}
+\end{paracol}
+\begin{paracol}{2}
+        \question{fenotipo}
+        \note{la manifestazione del genotipo}
+\end{paracol}
+\begin{paracol}{2}
+        \question{dal genotipo al fenotipo}
+        \note{richiede 
+        \begin{itemize}
+            \item \textbf{trascrizione} $\rightarrow$ mRNA
+            \item \textbf{traduzione} $\rightarrow$ polipeptide
+        \end{itemize}
+        \includegraphics[width=\textwidth]{trascrizione traduzione.jpg} \\
+        ecco un'illustrazione che riassume i 2 processi
+        }
+\end{paracol}
+\summary{affinché si possa passare dal genotipo al fenotipo é necessaria la trascrizione e la traduzione}
+\end{document}
