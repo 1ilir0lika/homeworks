@@ -1,0 +1,265 @@
+\documentclass{beamer}
+\usepackage{tikz}
+\usefonttheme{structuresmallcapsserif}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{amsmath}
+\usepackage[italian]{babel}
+\usepackage{enumitem}
+\usepackage{pifont}
+\usepackage{xcolor}
+\usetikzlibrary{calc,shapes}
+\newsavebox\MBox
+\definecolor{zzttqq}{rgb}{0.6,0.2,0}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+\newcommand\Cline[2][red]{{\sbox\MBox{$#2$}%
+  \rlap{\usebox\MBox}\color{#1}\rule[-1.3\dp\MBox]{\wd\MBox}{0.5pt}}}
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+\newcommand{\DrawBox}[2]{%
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[->,shorten >=5pt,shorten <=5pt,out=70,in=130,distance=0.5cm,#1] (MarkA.north) to (MarkC.north);
+    \draw[->,shorten >=5pt,shorten <=5pt,out=50,in=140,distance=0.3cm,#2] (MarkA.north) to (MarkB.north);
+  \end{tikzpicture}
+}
+\title{geometria euclidea}
+\author{Ilir Lika}
+\institute{Istituto Maria Immacolata}
+\date{\today}
+\usetheme{CambridgeUS}
+\logo{\includegraphics[height=1.4cm]{logo.jpg}}
+\newif\ifplacelogo % create a new conditional
+\placelogotrue % set it to true
+\logo{\ifplacelogo\includegraphics[height=1.2cm]{logo.jpg}\fi} 
+\begin{document}
+\frame{\titlepage}
+\section{enti primitivi}
+\begin{frame}{enti primitivi}
+\begin{block}{definizione}
+una definizione é una frase con la quale associamo un nome all'ente(\textbf{un oggetto geometrico}) e ne descriviamo le caratteristiche
+\end{block}
+\begin{exampleblock}{esempio}
+un triangolo è un poligono con 3 lati
+\end{exampleblock}
+gli enti che compongono tutti gli altri enti sono chiamati \textbf{enti primitivi} e sono:
+\begin{itemize}
+    \item[$\bullet$] il punto(A)
+    \item[$\bullet$] la retta(r)
+    \item[$\bullet$] il piano($\alpha$)
+\end{itemize}
+\end{frame}
+\begin{frame}{enti primitivi}
+\include{entifondamentali}
+\end{frame}
+\section{teoremi e postulati}
+\begin{frame}{teoremi e postulati}
+    \begin{block}{teorema}
+    un teorema è un \textbf{enunciato} del quale si prova la sua veridicità con una dimostrazione \\
+    una dimostrazione è una serie di deduzioni che parte da qualcosa che si suppone vero(\textbf{l'ipotesi}) e arriva a quello che voleva dimostrare(\textbf{la tesi}) \\
+    ipotesi $\rightarrow$ deduzioni $\rightarrow$ tesi
+    \end{block}
+    \begin{block}{postulato o assioma}
+    gli assiomi sono proprietà che si danno per vere senza bisogno di dimostrazioni 
+    \end{block}
+\end{frame}
+\begin{frame}{postulati di appartenenza}
+   gli enti primitivi vengono definiti dai \\ \textbf{postulati di appartenenza e di ordine}
+\begin{block}{postulati di appartenenza}
+\begin{itemize}
+    \item il piano è un insieme di punti.Le rette sono sottoinsiemi del piano
+    \item a una retta appartengono \emph{almeno} 2 punti distinti.
+    \item nel piano esistono \emph{almeno} 3 punti che appartengono alla stessa retta.
+    \item due punti distinti appartengono entrambi a \emph{una sola retta} 
+\end{itemize}
+\end{block}
+\end{frame}
+\placelogofalse % turn the logo off (needs to be outside the {frame} environment)
+\begin{frame}{postulati di ordine}
+    Ogni retta può essere \textbf{orientata} stabilendo su di essa un verso di percorrenza
+    \begin{center}
+    \begin{tikzpicture}
+    \draw[-triangle 90] (1,0) -- (5,0);
+    \draw[dotted] (0,0) -- (1,0) (5,0) -- (6,0);
+    \node[mark size=2pt,color=red] at (4,0) {\pgfuseplotmark{*}};
+    \node[mark size=2pt,color=red] at (2,0) {\pgfuseplotmark{*}};
+    \node[above] at (4,0) {$A$};
+    \node[above] at (2,0) {$B$};
+    \end{tikzpicture}     
+    \end{center}
+    \begin{block}{postulati di ordine}
+    \begin{itemize}
+        \item se $A$ e $B$ sono 2 punti distinti su una retta,o $A$ precede $B$ oppure $B$ precede $A$
+        \item se $A$ precede $B$ e $B$ precede $C$,\emph{allora} $A$ precede $C$  
+        \item preso un punto $A$ su una retta c'è \emph{almeno} un punto che precede $A$ ed uno che segue $A$
+        \item presi due punti $B$ e $C$ su una retta,con $B$ che precede $C$, c'è \emph{almeno} un punto $A$ della retta che segue $B$ e precede $C$
+    \end{itemize}
+       \end{block}
+\end{frame}
+\section{figure e proprietà}
+\placelogotrue
+\begin{frame}{semirette}
+    \begin{block}{semirette}
+    su una retta orientata consideriamo un punto $P$:chiamiamo \textbf{semiretta} di \textbf{origine} $P$ l'insieme del punto $P$ e di tutti i punti che lo precedono,oppure l'insieme del punto $P$ e di tutti i punti che lo seguono
+       \end{block}
+      \hspace{2cm}
+    \begin{center}
+        \begin{tikzpicture}
+        \draw[-triangle 90] (1,2) -- (5,2);
+        \draw[dotted] (0,2) -- (1,2) (5,2) -- (6,2);
+        \draw[-triangle 90] (1,0) -- (5,0);
+        \draw[dotted] (0,0) -- (1,0) (5,0) -- (6,0);
+        \node[mark size=2pt](P1) at (3,0) {\pgfuseplotmark{*}};
+        \node[mark size=2pt](P2) at (3,2) {\pgfuseplotmark{*}};
+        \node[above] at (3,0) {$P$};
+        \node[above] at (3,2) {$P$};
+        \node[red](O) at (2,1) {origine};
+        \draw[red](O) -- (P1.center) (O) -- (P2.center);
+        \node[red](s1) at (2,2.75)  {semiretta};
+        \node[red](s2) at (4,-0.75) {semiretta};
+        \draw[red,->] (s1) -- (2,2);
+        \draw[red,->] (s2) -- (4,0);
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+\begin{frame}{segmenti}
+    \begin{block}{segmento}
+    su una retta orientata consideriamo i punti $A$ e $B$,con $A$ che \emph{precede} $B$.il \textbf{segmento} di \textbf{estremi} $A$ e $B$ e l'insieme dei punti di $A$ e $B$ e dei punti della retta che seguono $A$
+ e precedono $B$
+\end{block}
+\end{frame}
+\begin{frame}{semipiani}
+\begin{block}{semipiani}
+   \textbf{Partizione del piano mediante una retta}  Una retta di un piano divide i punti del piano che non le appartengono in due insiemi distinti, in modo che, se due punti appartengono allo stesso insieme, allora il segmento di cui sono estremi è contenuto nell’insieme e non interseca la retta; se appartengono a insiemi diversi, allora il segmento interseca la retta
+\end{block}
+\begin{block}{semipiano di origine}
+   Considerata una retta r di un piano, un semipiano di origine r è l’insieme dei punti di r e di uno dei due insiemi in cui il piano è diviso da r
+\end{block}
+\end{frame}
+\begin{frame}{figure convesse e concave}
+    \begin{block}{figure convesse e concave}
+       Una figura è convessa se, presi due suoi punti qualsiasi, questi sono sempre estremi di un segmento tutto contenuto nella figura. In caso contrario la figura è concava
+    \end{block}
+\end{frame}
+\begin{frame}{angoli}
+    \begin{block}{angolo}
+   In un piano consideriamo le semirette a e b con la stessa origine V. Un angolo di vertice V e lati a e b è l’insieme dei punti delle semirette a e b e di una delle due parti in cui esse dividono il pian
+    \end{block}
+\end{frame}
+\begin{frame}{figure uguali e congruenti}
+    \begin{block}{figure uguali e congruenti}
+       \begin{itemize}
+           \item[$\bullet$] uguali $\rightarrow$ ogni punto delle due figure coincidono
+           \item[$\bullet$] congruenti $\rightarrow$ le due figure possono esser sovrapposte per mezzo di movimenti rigidi(senza deformazioni)
+       \end{itemize}
+    \end{block}
+\end{frame}
+\section{linee,poligonali,poligoni}
+\subsection{linee}
+\begin{frame}{linee}
+    se con la matita tracciamo un segno su un foglio senza mai alzare la punta otteniamo una linea\\
+    ogni linea che non sia una retta,una semiretta o un segmento è detta \textbf{linea curva}\\
+    un tratto di curva compreso fra due suoi punti(\textbf{gli estremi}) è detto \textbf{arco} \\
+    tra le linee distinguiamo :
+    \begin{itemize}
+        \item[$\bullet$] linee aperte
+        \item[$\bullet$] linee chiuse
+        \item[$\bullet$] linee intrecciate(che si intersecano in se stesse in almeno un punto)
+        \item[$\bullet$] linee non intrecciate
+    \end{itemize}
+\end{frame}
+\begin{frame}{linee}
+    una linea chiusa e non intrecciata divide il piano in due insiemi: quello dei \textbf{punti interni} e quello dei \textbf{punti esterni} alla linea
+    \begin{block}{partizione del piano mediante una linea chiusa}
+    una linea che congiunge un punto interno e un punto esterno di una linea chiusa la interseca in almeno un punto
+    \end{block}
+    \end{frame}
+    \begin{frame}{la circonferenza}
+    \begin{block}{la circonferenza}
+    dati su un piano i punti $C$ e $P$,la loro \textbf{circonferenza} di \textbf{centro} $C$ e \textbf{raggio} $CP$ è l'insieme dei punti del piano che hanno la distanza uguale a quella di $P$
+    \end{block}
+\end{frame}
+    \subsection{poligonale}
+    \begin{frame}{poligonali}
+    \begin{block}{poligonale}
+   una \textbf{poligonale} o \textbf{spezzata} è un insieme di segmenti tale che:
+   \begin{enumerate}
+       \item[$\bullet$] ogni segmento è consecutivo ma non adiacente al successivo
+       \item[$\bullet$] ogni estremo dei segmenti appartiene al massimo a 2 di essi
+   \end{enumerate}
+    \end{block}
+\end{frame}
+   \subsection{poligoni}
+    \begin{frame}{poligoni}
+    \begin{block}{poligono}
+   un \textbf{poligono} é l'insieme dei punti di una poligonale chiusa e non intrecciata e dei suoi punti interni
+    \end{block}
+    \begin{itemize}
+        \item[$\bullet$]i segmenti che formano la poligonale sono i \textbf{lati};i loro estremi sono i \textbf{vertici}
+        \item[$\bullet$]gli angoli convessi formati dalle semirette di lati consecutivi sono gli \textbf{angoli} del poligono 
+        \item[$\bullet$]gli angoli adiacenti agli angoli interni sono gli \textbf{angoli esterni}
+        \item[$\bullet$]i segmenti che hanno per estremi due angoli non dello stesso lato sono le diagonali 
+    \end{itemize}
+\end{frame}
+\section{multipli e sottomultipli di segmenti ed angoli}
+\begin{frame}{multipli e sottomultipli di segmenti}
+    Dati un numero naturale $n$ e un segmento $AB$,il segmento $CD$ \textbf{multiplo} di $AB$ secondo $n$ è: 
+    \begin{itemize}
+\item[$\bullet$] il segmento nullo se $n=0$
+        \item[$\bullet$] $AB$ se $n=1$
+        \item[$\bullet$] la somma di $n$ segmenti congruenti ad $AB$ se $n>1$ \\
+        in simboli $CD \cong nAB$
+        \item[$\bullet$] Se $n \neq 0$, $CD$ è diviso in $n$ parti congruenti ad $AB$  anche che $a$ è \textbf{sottomultiplo} di $b$ secondo $n$ \\ 
+        in simboli $AB \cong \dfrac{1}{n}CD$
+    %    \item[$\bullet$] con $PQ \cong \dfrac{m}{n}AB$ indichiamo $PQ \cong m \left(
+  %     \dfrac{1}{n}AB
+ %       \right)
+     %   $ si legge $PQ$ é multiplo secondo $m$ del sottomultiplo secondo $n$ di $AB$
+    \end{itemize}
+\end{frame}
+\begin{frame}{multipli e sottomultipli di angoli}
+    Dati un numero naturale $n$ e un angolo $\alpha$,$\beta$ é multiplo di $\alpha$ secondo $n$ quando:
+\begin{itemize} 
+\item[$\bullet$]angolo nullo se $n=0$
+\item[$\bullet$] $\alpha$ se $n=1$
+\item[$\bullet$] somma di $n$ volte $\alpha$ \\
+    $\beta=n\alpha$
+    \item[$\bullet$] Se $n \neq 0$, $\beta$ è diviso in $n$ parti congruenti a $\alpha$  anche che $\alpha$ è \textbf{sottomultiplo} di $\beta$ secondo $n$ \\ 
+        in simboli $\alpha \cong \dfrac{1}{n}\beta$
+\end{itemize}
+\end{frame}
+\section{punto medio e bisettrice}
+\begin{frame}{punto medio}
+    \begin{block}{punto medio}
+       il \textbf{punto medio} di un segmento è il punto che lo divide in 2 segmenti congruenti
+    \end{block}
+    \begin{center}
+  
+    \begin{tikzpicture}
+    \node[mark](A) at (0,0) {\pgfuseplotmark{*}};
+    \node[mark](B) at (5,0) {\pgfuseplotmark{*}};
+    \node[mark](M) at (2.5,0) {\pgfuseplotmark{*}};
+    \draw (A)--(B);
+    \node[above] at (2.5,0) {$M$};
+    \node[above] at (0,0) {$A$};
+    \node[above] at (5,0) {$B$};
+    \end{tikzpicture}
+    \end{center}
+    $$AM \cong MB $$
+
+    $$AM \cong \dfrac{1}{2}AB $$
+   
+    $$AB \cong \dfrac{1}{2}AB$$
+\end{frame}
+\begin{frame}{bisettrice}
+    \begin{block}{bisettrice}
+    la \textbf{bisettrice} di un angolo è la semiretta che lo divide in 2 angoli congruenti
+    \end{block}
+    \begin{center}
+            \include{bisettrice}
+    \end{center}
+\end{frame}
+\begin{frame}{angoli retti,acuti,ottusi}
+
+\end{frame}
+\end{document}
