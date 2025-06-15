@@ -1,0 +1,309 @@
+---
+documentclass: jss
+author:
+  - name: Ilir Lika
+    affiliation: Istituto Maria Immacolata
+    # use this syntax to add text on several lines
+title:
+  formatted: "Le leggi di Ohm"
+  # If you use tex in the formatted title, also supply version without
+abstract: >
+  Introduzione alle leggi di Ohm attraverso il metodo sperimentale usando TinkerCAD.
+preamble: >
+  \usepackage{amsmath}
+output: rticles::jss_article
+header-includes:
+  - \usepackage{booktabs}
+---
+
+
+# Resistori
+## Scopo
+
+Lo scopo di questa relazione é l'enunciazione delle leggi di Ohm a partire da dati empirici fatti attraverso simulazioni e quindi quasi scoprire queste leggi da 0 solamente grazie ad osservazioni proprio come ha fatto Ohm stesso.
+
+## Trattazione teorica
+
+Le **leggi di Ohm** sono fondamentali per la comprensione del comportamento dei circuiti elettrici in corrente continua (DC). Esse descrivono la relazione tra tre grandezze elettriche principali: **tensione (V)**, **corrente (I)** e **resistenza (R)**.
+
+### Prima legge di Ohm
+
+La **prima legge di Ohm** afferma che, a temperatura costante, **la corrente che attraversa un conduttore è direttamente proporzionale alla tensione applicata ai suoi capi**. In formula:
+
+$$
+V = R \cdot I
+$$
+
+Dove:
+
+* $V$ è la tensione (o differenza di potenziale), misurata in volt (V),
+* $I$ è l’intensità della corrente, misurata in ampere (A),
+* $R$ è la resistenza elettrica, misurata in ohm ($\Omega$).
+
+Questa legge fu enunciata per la prima volta da **Georg Simon Ohm** nel 1827 attraverso esperimenti sistematici, osservando il comportamento dei conduttori metallici al variare della tensione e misurando la corrente risultante.
+
+### Seconda legge di Ohm
+
+La **seconda legge di Ohm** riguarda la resistenza di un conduttore e afferma che **la resistenza elettrica di un filo conduttore è direttamente proporzionale alla sua lunghezza e inversamente proporzionale alla sua sezione**. Inoltre, dipende dal materiale di cui è composto, tramite un coefficiente chiamato **resistività** $\rho$. La formula è:
+
+$$
+R = \rho \cdot \frac{L}{A}
+$$
+
+Dove:
+
+* $R$ è la resistenza del conduttore,
+* $\rho$ è la resistività del materiale ($\Omega$·m),
+* $L$ è la lunghezza del conduttore (m),
+* $A$ è l’area della sezione trasversale del conduttore (m²).
+
+Questa legge è particolarmente utile per capire come il materiale, le dimensioni e la geometria di un filo influenzino la sua capacità di condurre corrente.
+
+Ecco un breve testo in Markdown che tratta la teoria dei resistori collegati in serie e in parallelo:
+
+---
+
+## Resistori in Serie e Parallelo
+
+### Resistori in Serie
+
+Quando due o più resistori sono collegati in **serie**, la corrente elettrica che li attraversa è la stessa per ciascun componente. La tensione totale ai capi del circuito è la somma delle tensioni ai capi di ogni resistore.
+
+* **Corrente**: identica per tutti i resistori
+* **Tensione**: si somma tra i resistori
+* **Resistenza equivalente**: somma delle singole resistenze
+
+**Formula:**
+
+$$
+R_{eq} = R_1 + R_2 + \dots + R_n
+$$
+
+### Resistori in Parallelo
+
+Quando due o più resistori sono collegati in **parallelo**, ciascun resistore è soggetto alla stessa tensione, mentre la corrente si divide tra i vari rami del circuito.
+
+* **Tensione**: identica per tutti i resistori
+* **Corrente**: si divide tra i resistori
+* **Resistenza equivalente**: il reciproco della somma dei reciproci delle singole resistenze
+
+**Formula:**
+
+$$
+\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n}
+$$
+
+Nel caso di due resistori, la formula si semplifica:
+
+$$
+R_{eq} = \frac{R_1 \cdot R_2}{R_1 + R_2}
+$$
+
+### Confronto tra Serie e Parallelo
+
+```{r confronto-resistori, echo=FALSE, message=FALSE}
+library(knitr)
+library(kableExtra)
+# Creazione della tabella
+dati <- data.frame(
+  Caratteristica = c("Corrente", "Tensione", "Resistenza equivalente"),
+  Serie = c("Uguale per tutti", "Si somma tra i resistori", "Somma delle resistenze"),
+  Parallelo = c("Si divide tra i resistori", "Uguale per tutti i resistori", "Minore della più piccola resistenza")
+)
+
+# Visualizzazione della tabella
+kable(dati, caption = "Confronto tra collegamenti in serie e parallelo",format = "latex",
+  booktabs = TRUE,
+  escape = FALSE
+)%>%
+  kableExtra::kable_styling(latex_options = "hold_position")
+```
+
+
+## Apparecchiature utilizzate
+
+Per la realizzazione delle simulazioni e la raccolta dei dati sperimentali è stato utilizzato il software online **TinkerCAD Circuits**, che consente la progettazione e la verifica di circuiti elettrici in ambiente virtuale.
+
+I componenti utilizzati nelle simulazioni sono i seguenti:
+
+- **Resistori** con valori noti, fondamentali per studiare la relazione tra tensione, corrente e resistenza espressa in $\Omega$;
+- **Multimetro**, utilizzato in modalità voltmetro per misurare la tensione ai capi dei resistori e in modalità amperometro per misurare la corrente nel circuito;
+- **Batteria** da 9V, impiegata come generatore di tensione continua per alimentare il circuito.
+
+L'utilizzo di questi elementi all'interno di TinkerCAD permette di simulare in modo realistico fenomeni elettrici di base, offrendo un contesto sicuro e flessibile per l'esplorazione sperimentale delle leggi dell’elettricità.
+ 
+
+![](img/tinkercad.png)
+
+## Procedura
+
+L'esperimento è stato svolto utilizzando il simulatore online TinkerCAD Circuits, che consente di costruire e analizzare circuiti elettrici in modo virtuale.
+
+Per la configurazione del circuito si è proceduto nel seguente modo:
+
+- Si costruisce il circuito secondo le indicazioni fornite dall'insegnante
+
+![](img/resistori.png)
+
+- Il multimetro è stato collegato ai capi del dipolo da analizzare, per misurare la tensione e la corrente.
+- Si misura anche la corrente di ogni singolo ramo
+- Sono stati annotati i valori letti dal multimetro.
+
+Questa procedura ha permesso di raccogliere i dati necessari per analizzare sperimentalmente le leggi fondamentali dei circuiti elettrici in corrente continua.
+
+![](img/multimeters.png)
+
+## Dati grezzi
+Qui indicati sotto forma di tabella i dati estrapolati dai multimetri.
+```{r dati-grezzi,echo=FALSE}
+library(kableExtra)
+# Dati
+nomi_resistori <- c("R1", "R2", "R3", "R4", "R5")
+tensioni <- c(7.30, 0.531, 1.59, 1.06, 1.59)
+correnti_mA <- c(73, 26.5, 19.9, 26.5, 26.5)
+correnti_A <- correnti_mA / 1000
+resistenze_teoriche <- c(100, 20, 80, 40, 60)
+
+# Calcoli
+resistenze_sperimentali <- tensioni / correnti_A
+
+# Tabella con nomi leggibili per LaTeX
+dati <- data.frame(
+  Resistore = nomi_resistori,
+  Tensione = round(tensioni, 3),
+  Corrente = round(correnti_mA, 2),
+  R_sperimentale = round(resistenze_sperimentali, 2),
+  R_teorica = resistenze_teoriche
+)
+
+knitr::kable(
+  dati,
+  col.names = c("Resistore", "Tensione (V)", "Corrente (mA)", 
+                "R sperimentale ($\\Omega$)", "R teorica ($\\Omega$)"),
+  caption = "Tabella delle resistenze calcolate con la legge di Ohm",
+  format = "latex",
+  booktabs = TRUE,
+  escape = FALSE
+)%>%
+  kableExtra::kable_styling(latex_options = "hold_position")
+```
+
+## Tabella con elaborazione
+
+Per trasparenza lascio indicato il codice scritto per generare la tabella che include tutte le formule inverse derivabili dalle prima legge di Ohm usate per trovare i valori.
+
+```{r dati-elaborati, results='asis'}
+# Dati
+nomi_resistori <- c("R1", "R2", "R3", "R4", "R5")
+tensioni <- c(7.30, 0.531, 1.59, 1.06, 1.59)
+correnti_mA <- c(73, 26.5, 19.9, 26.5, 26.5)
+correnti_A <- correnti_mA / 1000
+resistenze_teoriche <- c(100, 20, 80, 40, 60)
+
+resistenze_sperimentali <- tensioni / correnti_A
+
+# Tabella dati elaborati
+dati_elaborati <- data.frame(
+  Resistore = nomi_resistori,
+  `Tensione(V)` = round(tensioni, 3),
+  `Corrente(mA)` = round(correnti_mA, 2),
+  `Resistenza sperimentale(Ohm)` = round(resistenze_sperimentali, 2),
+  `Resistenza teorica(Ohm)` = resistenze_teoriche
+)
+
+# Stampa tabella
+knitr::kable(
+  dati_elaborati,
+  caption = "Tabella delle resistenze calcolate con la legge di Ohm",
+  format = "latex",
+  booktabs = TRUE
+)
+```
+
+
+# Condensatori
+
+## Trattazione teorica
+I **condensatori** sono componenti fondamentali nei circuiti elettrici ed elettronici. Essi immagazzinano **energia elettrica** sotto forma di **campo elettrico** tra due superfici conduttrici, dette **armature**, separate da un materiale isolante chiamato **dielettrico**.
+
+#### Definizione di capacità
+
+La **capacità elettrica** $C$ di un condensatore è definita come il rapporto tra la **carica** $Q$ accumulata su ciascuna armatura e la **differenza di potenziale** $V$ tra esse:
+
+$$
+C = \frac{Q}{V}
+$$
+
+dove:
+
+* $C$ è la capacità, espressa in **farad** (F),
+* $Q$ è la carica, in **coulomb** (C),
+* $V$ è la tensione, in **volt** (V).
+
+#### Energia immagazzinata
+
+L'energia immagazzinata in un condensatore carico è data dalla relazione:
+
+$$
+E = \frac{1}{2} C V^2
+$$
+
+Questa energia può essere restituita al circuito quando il condensatore si scarica.
+
+#### Collegamenti in serie e in parallelo
+
+I condensatori si possono collegare in **serie** o in **parallelo**, ottenendo differenti valori di capacità equivalente.
+
+* **Serie**:
+
+  $$
+  \frac{1}{C_{\text{eq}}} = \sum_{i} \frac{1}{C_i}
+  $$
+
+  In un collegamento in serie, la **carica è la stessa** su tutti i condensatori, mentre la **tensione totale** è la somma delle tensioni sui singoli.
+
+* **Parallelo**:
+
+  $$
+  C_{\text{eq}} = \sum_{i} C_i
+  $$
+
+  In parallelo, la **tensione è la stessa** su tutti i condensatori, mentre la **carica totale** è la somma delle cariche immagazzinate.
+
+
+## Procedura
+
+La procedura é analoga a quella dei resistori,ed il circuito da realizzare era il seguente:
+
+![](img/condensatori.png)
+
+## Dati grezzi 
+
+![](img/condensatoriON.png)
+
+```{r tabella-condensatori, echo=FALSE, results='asis'}
+library(knitr)
+library(kableExtra)
+
+# Dati condensatori
+condensatori <- data.frame(
+  Condensatore = c("C1", "C2", "C3", "C4", "C5", "C6"),
+  `Carica(mF)` = c(10, 8, 5, 1, 4, 10),
+  `Tensione(V)` = c(2.02, 1.07, 1.93, 1.93, 5.05, 0.859)
+)
+
+# Stampa tabella
+kable(
+  condensatori,
+  caption = "Tabella delle cariche e tensioni dei condensatori nel circuito simulato",
+  format = "latex",
+  booktabs = TRUE,
+  escape = FALSE
+)%>%
+  kableExtra::kable_styling(latex_options = "hold_position")
+```
+
+## Conclusione
+
+Le leggi di Ohm hanno determinato correttamente il comportamento del simulatore,questo implica come il simulatore sembra essere una buona modellizzazione del mondo reale dove vigono le leggi di Ohm.
+Infatti i valori reali e quella calcolata teoricamente coincidono
