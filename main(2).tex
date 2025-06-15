@@ -1,0 +1,163 @@
+%%%%%%%%%%%%%%%%%
+% This is a two-column CV template based on moderncv.cls
+% (v1.0, May 16 2024) written by Genki Ogaki (rockstarogk@gmail.com). Compiles with XeLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+% environment
+\documentclass[11pt,a4paper]{moderncv}
+\moderncvtheme[blue]{banking}
+\nopagenumbers{}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\usepackage[T1]{fontenc}
+\usepackage{inputenc}
+\usepackage[scale=0.9]{geometry}
+\usepackage{tabularx}
+\usepackage{mathpazo}
+
+% macro
+\renewcommand*{\labelitemi}{-}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+\newcommand*{\experienceentry}[3][1.5mm]{
+    \subsection{#2} \vspace{-1.5mm}
+    \begin{tabularx}{\textwidth}{LR}
+        {\itshape #3}
+    \end{tabularx}
+    \par\addvspace{#1}
+}
+
+\newcommand*{\educationentry}[4][0.5mm]{
+    \begin{tabularx}{\textwidth}{LR}
+        {\bfseries #3} & {\bfseries #4} \\
+    \end{tabularx}
+    {\itshape #2}
+    \par\addvspace{#1}
+}
+
+\newcommand*{\scoreentry}[3][2.5mm]{
+    {\bfseries #2} \\
+    {\itshape #3}
+    \par\addvspace{#1}
+}
+
+% preamble
+\firstname{Ilir}
+\familyname{Lika}
+\address{Istituto Maria immacolata,Pinerolo}{}
+
+% document
+\begin{document}
+\maketitle
+\vspace{-9.0mm}
+\begin{tabularx}{\textwidth}{C}
+    \emailsymbol\enspace \emaillink{ilir.lika@istitutomariaimmacolata.it} 
+\end{tabularx}
+\vspace{-2.0mm}
+
+% left column
+\begin{minipage}[t]{0.62\textwidth}
+\section{PROGETTI PERSONALI}
+\experienceentry{Animazioni con Manim}{dal 2022}
+
+\textbf{Animazioni ed analisi dati mediante linguaggio python}
+\begin{itemize}
+    \item \href{https://youtu.be/O17m9bKEgNs?feature=shared}{Teorema di Bayes}
+    \item \href{https://youtu.be/3SJeTFr3EhY?feature=shared}{Funzioni}
+    \item \href{https://github.com/1ilir0lika/video-con-manim}{Molti altri}
+\end{itemize}
+\vspace{1.0mm}
+
+\experienceentry{Stazione metereologica}{luglio 2022}
+
+\textbf{Elettronica e analisi dati}
+\begin{itemize}
+    \item Progettato e realizzato circuito Arduino per la misurazione della temperatura,pressione ed umiditá atmosferica
+    \item Sviluppato bot telegram per notificarmi delle temperature esterne
+    \item Analizzato questi dati e rappresentati mediante diagrammi climatici utilizzando ggplot2 \\
+    \includegraphics[width=0.3\textwidth]{climatico.pdf}
+\end{itemize}
+\vspace{2.0mm}
+
+\experienceentry{Scraper con selenium}{2023}
+
+\textbf{Web scraping,analisi dati e data visualization}
+\begin{itemize}
+    \item Sviluppato web scraper in grado di accedere ai prezzi di un sito web e salvarli in un file con le rispettive date
+    \item Sviluppato script in python in grado di analizzare l'andamento dei prezzi per consigliare cosa comprare
+\end{itemize}
+\vspace{1.0mm}
+
+\experienceentry{Sondaggi di gruppo su calendario}{Giugno 2024}
+
+\textbf{database SQL}
+\begin{itemize}
+    \item Sviluppato bot telegram in grado di far inserire i giorni nei quali non si è disponibili e salvarli in un database 
+    \item analisi del database per capire i giorni dove più persone sono disponibili per il dato evento  \\
+    \includegraphics[width=0.5\textwidth]{bot.png}
+\end{itemize}
+\end{minipage}
+\hfill
+% right column
+\begin{minipage}[t]{0.35\textwidth}
+\section{RIASSUNTO}
+Studente di terza superiore affascinato dalle materie scientifiche che costantemente cerca di apprendere nuove conoscenze.
+
+\section{DATI ANAGRAFICI}
+\begin{tabularx}{\textwidth}{>{\bfseries}l@{\hskip 3.5mm}L}
+Nome & Ilir \\
+Cognome & Lika \\
+Data nascita & 21/02/2007 \\
+\end{tabularx}
+\section{SKILLS}
+\begin{tabularx}{\textwidth}{>{\bfseries}l@{\hskip 3.5mm}L}
+Back End & Rust,Python,Perl \\
+Data visualization & Panda,\href{https://www.manim.community/}{Manim},Ggplot2 \\
+OS & Linux, Bsd\\
+DevOps & Docker\\
+Misc. & \LaTeX,Vim \\
+Soft Skills & Problem solving
+\end{tabularx}
+
+\section{ISTRUZIONE}
+\educationentry{elementari e medie}{Istituto comprensivo Franco Marro}{Villar Perosa, Torino}
+\par
+\vspace{3.0mm}
+\educationentry{superiori}{Istituto Maria Immacolata}{Pinerolo, Torino}
+
+\section{PUNTEGGI}
+\scoreentry{Olimpiadi chimica triennio (2023/24)}{57/114 classe B}
+\scoreentry{Olimpiadi scienze biennio}{30/81 classe B}
+\scoreentry{First}{Overall: 175}
+\section{LINGUE}
+\begin{itemize}
+    \item Italiano (nativo)
+    \item Inglese (B2)
+\end{itemize}
+
+\section{HOBBY}
+\begin{itemize}
+    \item Scacchi
+    \item Leggere libri non di narrativa
+\end{itemize}
+\end{minipage}
+
+\end{document}
