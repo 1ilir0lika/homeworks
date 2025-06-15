@@ -1,0 +1,163 @@
+\documentclass{beamer}
+\usepackage{tikz}
+\usefonttheme{structuresmallcapsserif}
+\usepackage{amsmath}
+\usepackage[italian]{babel}
+\usepackage{enumitem}
+\usepackage{pifont}
+\usepackage{xcolor}
+\usetikzlibrary{calc,shapes}
+\usepackage{hyperref}
+\title{L'invasione della formica rossa di fuoco}
+\author{Ilir Lika}
+\institute{Istituto Maria Immacolata}
+\date{\today}
+\usetheme{CambridgeUS}
+\logo{\includegraphics[height=1.4cm]{logo.jpg}}
+\setbeamertemplate{caption}{\insertcaption}
+\begin{document}
+\frame{\titlepage}
+	\section{indice}
+\begin{frame}{indice}
+	\begin{itemize}[label=$\bullet$]
+		\item introduzione
+		\item il nostro protagonista
+   \begin{itemize}[label=\ding{212}]
+	\item di chi stiamo parlando?
+   \item un ritratto della formica
+   \begin{itemize}[label=$\blacksquare$]
+       \item la necrophoresis
+   \end{itemize}
+   \end{itemize}
+		\item da dov'è arrivata?
+        \item com'è arrivata in Italia?
+        \item le previsioni
+        \item cosa possiamo fare?
+    \end{itemize}
+	\end{frame}
+\begin{section}{introduzione}
+\begin{frame}{introduzione}
+    \begin{columns}
+    \column{0.4\textwidth}
+        \centering
+        oggi in Italia si può assistere ad \alert{una vera e propria invasione} di una specie invasiva(non autoctona) che già soltanto negli USA fa spendere
+        \begin{alertblock}{ogni anno}
+        più di 5 miliardi di dollari 
+        \end{alertblock}
+    \column{0.6\textwidth}
+        \centering
+        \includegraphics[scale=0.4]{invasione.jpg}
+    \end{columns}
+    
+\end{frame}
+\end{section}
+\begin{section}{il nostro protagonista}
+\begin{frame}{di chi stiamo parlando?}
+\begin{columns}
+\column{0.5\textwidth}
+    \centering
+    Stiamo parlando della formica rossa di fuoco(\alert{Solenopsis invicta})
+    \includegraphics[width=0.9\textwidth]{solenopsis.jpg}
+\column{0.5\textwidth}
+    \centering 
+    da non confondere con la più comune,presente anche qui in Piemonte,formica rossa(\alert{Formica rufa}) \\
+    \includegraphics[width=0.6\textwidth]{rufa.jpg}
+\end{columns}
+\end{frame}
+\begin{frame}{un ritratto della formica}
+La RIFA(red imported fire ant) oltre ad essere un pericolo per l'economia e la salute pubblica è anche 
+\begin{block}{una formica}
+incredibilmente particolare per molti aspetti
+\end{block}
+\begin{itemize}[label=\ding{212}]
+\item è sia poliginica che monoginica
+\item è polimorfa
+\item è velenosa
+\item è molto eusociale e presenta comportamenti molto particolari
+\end{itemize}
+\end{frame}
+\begin{frame}{poliginia e monoginia}
+    è sia poliginica che monoginica,ovvero le società possono essere fatte in alcuni casi(monoginia) da \alert{una sola regina} ed in altri(poliginia) da \alert{più regine},questa caratteristica viene determinata da un singolo allele,questo passaggio da un allele all'altro è spiegato molto bene \color{blue}{\href{https://cordis.europa.eu/project/id/623713/results/it}{in degli articoli fruibili nel CORDIS}} \\
+    \includegraphics[width=0.5\textwidth]{regina.jpg}
+
+\end{frame}
+\begin{frame}{polimorfismo}
+ è polimorfa, la società o,ancora meglio,il super organismo,dove le sue cellule sono le formiche stesse, è divisa in caste e queste sono determinate geneticamente creando formiche che devono compiere ruoli diversi in modi diversi(le operaie sono piccole ed economiche da produrre,i soldati sono grandi e forti etc…) 
+
+\includegraphics[width=0.6\textwidth]{polimorfismo.png}
+\end{frame}
+\begin{frame}{è velenosa}
+    è molto velenosa,questo l'ha resa,in funzione di preservare la salute pubblica: \\ \textit{\alert{la specie di formica finora studiata in modo più approfondito}, si serve di circa \alert{20 segnali} }(per comunicare)\textit{: la cifra esatta dipende da quali funzioni – tra quelle molto simili – si vogliono considerare distinte. \alert{Solo due segnali sono tattili, tutti gli altri sono chimici}}[Il superorganismo]
+    \includegraphics[scale=0.2]{sting.png}
+\end{frame}
+\subsection{eusocialità}
+\begin{frame}{è molto eusociale}
+    siccome questo è l'aspetto che mi interessa maggiormente ho scelto dei particolari comportamenti che spero troverete anche voi affascinanti,quelli che ho scelto sono :
+    \begin{itemize}[label=\ding{212}]
+        \item rilascio di una goccia di veleno sul pungiglione proseguito dal suo agitamento(flagging) per spaventare i nemici
+        \item costruzione di zattere quando si alza il livello dell'acqua
+        \item presenza della \textit{necrophoresis}
+    \end{itemize}
+     \begin{figure}
+      \begin{columns}
+        \column{.4\linewidth}
+        \includegraphics[]{raft.jpg}
+        \column{.1\linewidth}
+        \rotatebox[origin=c]{180}{\ding{212}}
+        \column{.5\linewidth}
+        \caption{ zattera tipica formata da S. invicta }
+      \end{columns}
+    \end{figure}
+      %  \includegraphics[scale=1.0]{raft.jpg}
+\end{frame}
+\begin{frame}{necrophoresis}
+\begin{columns}
+    \column{0.6\textwidth}
+    \centering
+     questo comportamento,\alert{presente esclusivamente negli insetti sociali}(api,formiche,etc...),consiste nella sanificazione del nido attraverso la \alert{rimozione dei cadaveri} per evitare la diffusione di potenziali virus,questo comportamento scoperto dal biologo E.O. Wilson risulta ereditario e viene \alert{fatto spesso da solo delle classi specializzate}.É stato molto importante perchè ha permesso al biologo di spiegare come \alert{comportamenti e tratti della personalità possano essere determinati anche dai geni},permettendo l'invenzione della sociobiologia
+    \column{0.4\textwidth}
+    \includegraphics[scale=0.4]{Necrophoresis.jpg}
+\end{columns}
+
+\end{frame}
+\end{section}
+\begin{frame}{da dov'è arrivata?}
+    la RIFA è nativa del Sud America,però,proprio perchè molto resiste,quasi invincibile(da qui "invicta"),è riuscita ad espandersi in \alert{gran parte del mondo},ecco una mappa interattiva \\
+    \href{https://antmaps.org/?mode=species&species=Solenopsis.invicta}{\includegraphics[scale=0.12]{map.png}} 
+\end{frame}
+\begin{frame}{com'è arrivata in Italia?}
+\begin{columns}
+    \column{0.4\textwidth}
+      \begin{block}{domanda}
+            com'è possibile che siano stati trovati ben 88 nidi di S. invicta a Siracusa?
+    \end{block}
+      \begin{alertblock}{risposta}
+        è indubbiamente collegato al fatto che la città sia in prossimità di un porto dentro il quale saranno arrivate delle navi contenenti ancora qualche formica viva
+    \end{alertblock}
+    \column{0.6\textwidth}
+    \includegraphics[scale=0.15]{siracusa.jpg}
+\end{columns}
+\end{frame}
+  \begin{frame}{le previsioni}
+      \begin{columns}
+            \column{0.4\textwidth}    
+                \includegraphics[scale=0.1]{previsioni.png}
+            \column{0.6\textwidth}
+            {\tiny
+            (A) Map showing occurrence data (red dots) and background (blue areas) used
+for species distribution models of S. invicta. (B) Ensemble model predictions under current environmental conditions at a
+global scale. (C) Ensemble model predictions for future environmental scenarios at a global scale for the year 2050. (D)
+Ensemble model predictions for future environmental scenarios at a global scale for the year 2070. (E) Ensemble model
+predictions for future environmental scenarios at a global scale for the year 2090. (F) Ensemble model predictions for future
+environmental scenarios at European and Mediterranean scale for the year 2070 and (G) for the year 2090. (H) Binary
+ensemble model predictions under current environmental conditions and (I, J, K) for future environmental scenarios at
+European and Mediterranean scale.
+}
+      \end{columns}
+  \end{frame}
+
+\begin{frame}{cosa possiamo fare?}
+    Siccome in tutta la storia di spese e tentativi di eradicazione della specie solo in un caso si ha avuto successo(in Nuova Zelanda) penso sia meglio accettare l'inevitabile,ma comunque preoccuparsi della \alert{salvaguardia della biodiversità} che viene spesso messa a rischio da specie invasive,come anche il granchio blu,per il semplice fatto che nel nuovo habitat non esistono ancora parassiti specifici per loro e tendenzialmente gli esemplari che riescono a sopravvivere al viaggio così tanto lungo sono molto resistenti.Inoltre,come si evince dai grafici,\alert{prevenire il più possibile il cambiamento climatico} avrebbe un'ottimo impatto 
+\end{frame}
+
+\end{document}
