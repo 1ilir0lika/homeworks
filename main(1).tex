@@ -1,0 +1,158 @@
+\documentclass[a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage[italian]{babel}   
+\usepackage{amsmath}
+\usepackage{paracol} % added <<<<<<<<<<<<<<<<<<<<<
+\usepackage{tcolorbox}
+
+\usepackage{lipsum}% generate filler text 
+
+\newcommand{\question}[1]{% Ask the question
+    \begin{tcolorbox}[colback=red!05,colframe=red!25,sidebyside align=top,width=\linewidth,before skip=1ex]
+        #1
+        
+    \end{tcolorbox}%    
+    \switchcolumn % now write in the right column   
+}
+
+\newcommand{\note}[1]{% Add as many notes as you like
+    \begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\linewidth,before skip=1ex]
+        #1
+    \end{tcolorbox}         
+}   
+
+\newcommand{\summary}[2][]{%
+\begin{minipage}[b]{\textwidth}
+    \vspace*{\baselineskip}
+    \begin{tcolorbox}[colframe=green!50!blue!80,fonttitle=\large\bfseries\sffamily,
+        after skip = \baselineskip,
+        title=Riassunto]
+        #2
+    \end{tcolorbox}
+\end{minipage}
+#1}
+
+
+\setcolumnwidth{0.40\textwidth/20pt,0.60\textwidth}% column separation =20pt
+\setlength{\columnseprule}{3pt} % column width
+\colseprulecolor{red}
+
+\title{%
+        \begin{tcolorbox}[before skip = -\baselineskip, after skip =-\baselineskip]
+            \centering\Huge\sffamily Le proprietá colligative   
+        \end{tcolorbox}
+}
+
+\date{}
+\parindent=0pt
+
+\begin{document}
+\maketitle
+\tableofcontents
+\section{Gli esperimenti}
+\subsection{Tensione di vapore}
+\begin{paracol}{2}
+\question{requisiti}
+\note{$NaCl+H_2O$}
+\note{
+conc: $ \dfrac{20g}{0.213l} \approx 100g/l$ \\
+\includegraphics[width=0.5\textwidth]{20g.jpg}
+}
+\end{paracol}
+
+\begin{paracol}{2}  
+    \question{riscontri empirici}
+    \note{La soluzione con $NaCl$ ha una tendenza ad evaporare ad una $T$ maggiore}
+\end{paracol}
+\subsection{Innalzamento ebullioscopico}
+\begin{paracol}{2}
+\question{requisiti}
+\note{$H_2O$ e $H_2O+C_6H_{12}O_6$}
+\note{piano di $Al$}
+\note{sorgente di calore per irradiare il piano}
+\note{\includegraphics[height=\textwidth]{stagnola.jpg}}
+\end{paracol}
+
+\begin{paracol}{2}  
+    \question{riscontri empirici}
+    \note{La goccia d'acqua demineralizzata pura ha una tendenza ad evaporare maggiore}
+\end{paracol}
+\subsection{Abbassamento crioscopico}
+\begin{paracol}{2}
+\question{requisiti}
+\note{$H_2O$,sale,ghiaccio,mortaio }
+\end{paracol}
+\begin{paracol}{2}
+\question{preparazione}
+\note{Preparare in un mortaio una miscela frigorifera triturando finemente del ghiaccio ed aggiungendovi abbondantemente sale fino.}
+
+\note{Versare i liquidi (ancora caldi) precedentemente utilizzati nella prova di ebollizione in due provette e sistemare le provette nella miscela frigorifera.}             
+\note{\includegraphics[width=\textwidth,height=0.5\textwidth]{crioscopico.png}}
+
+\end{paracol}
+
+\begin{paracol}{2}  
+    \question{riscontri empirici}
+    \note{In pochi istanti avverrà il raffreddamento ed il congelamento dell’acqua distillata, mentre il congelamento della soluzione salina avviene più tardi ed interesserà soltanto una minima parte del corpo liquido.}
+\end{paracol}
+\subsection{Pressione osmotica}
+\begin{paracol}{2}
+\question{requisiti}
+\note{2 uova}
+\note{dell'$H_2O$ e dell'aceto}
+\note{ad una delle 2 uova andrá tolto il guscio facendola pesare di meno}
+\end{paracol}
+
+\begin{paracol}{2}  
+    \question{riscontri empirici}
+    \note{\includegraphics[height=\textwidth]{uovo.jpg} \\
+   Le uova hanno acquisito una consistenza insolita per via dell'osmosi}
+\end{paracol}
+\summary[\clearpage]{Le proprietá colligative sono proprietá che non dipendono dalla natura del soluto,ma solamente dalla sua concentrazione}
+\section{Trattazione teorica}
+\subsection{Tensione di vapore}
+\begin{paracol}{2}
+\question{La legge di Raoult}
+\note{La legge che regola questo fenomeno si chiama legge di Raoult}
+\note{La legge afferma che: \\
+    \textbf{L'aggiunta di un soluto non volatile a un liquido determina l'abbassamento della tensione di vapore del liquido} 
+    }
+\note{ed essendo una proprietá colligativa e quindi collegata unicamente alla quantitá del soluto e non alla sua natura \\ \textbf{La tensione di vapore di un dato solvente in soluzione é uguale alla tensione di vapore del solvente puro moltiplicato per la sua frazione molare}
+}
+\note{$$p_{solvente}=\chi_{soluto}\cdot p^{0}_{solvente}$$ }
+\end{paracol}
+\begin{paracol}{2}
+\question{precisazioni}
+\note{la suddetta legge funziona solamente nelle soluzioni ideali ergo quelle molto diluite}
+\note{é anche possibile esprimere la diminuzione di $p$ in funzione della $\chi_{soluto}$:\\
+$p^{0}_{solvente}-p_{solvente}=\Delta p=\chi_{soluto} \cdot p^{0}_{solvente}$
+}
+
+\end{paracol}
+\subsection{Innalzamento ebullioscopico}
+\begin{paracol}{2}
+    \question{innalzamento ebullioscopico}
+    \note{Se la curva di tensione si abbassa sará necessario raggiungere una $T$ piú elevata per sí che la tensione di vapore uguagli quella della superficie \includegraphics[width=\textwidth]{innalzamento_ebu.jpg}
+    }
+  
+\end{paracol}
+\subsection{Abbassamento crioscopico}
+\begin{paracol}{2}
+    \question{il fenomeno}
+    \note{ la  presenza di soluto non volatile rende più “disordinata” la fase liquida e questo costituisce un motivo (di natura entropica) di aumentata stabilità. Ce ne accorgiamo perché il \textbf{campo di esistenza della fase liquida si amplia}: mentre l’acqua distillata è restata liquida tra 0 °C e 100 °C, la nostra soluzione salina resta liquida in un intervallo maggiore   (tra -1,1°C e + 100,5 °C)}
+\end{paracol}
+\summary[\clearpage]{La presenza di soluto porta con sé l'innalzamento del punto di ebollizione e l'abbassamento di quello di congelamento secondo le seguenti leggi $$\Delta t_c=K_cm$$ $$\Delta t_e=K_em$$ \\ dove $m$ é la molalitá
+}
+\subsection{Pressione osmotica}
+\begin{paracol}{2}
+    \question{il fenomeno}
+    \note{    La presenza del soluto  ha di nuovo modificato un comportamento del solvente: la sua capacità di penetrare nell’uovo attraverso la membrana. \textbf{Le soluzioni che sono più ricche di soluti rispetto al contenuto della membrana (ipertoniche) si comportano richiamando acqua (le molecole fuoriescono dall’uovo attraversando la membrana) mentre le soluzioni più povere di soluti (ipotoniche) si comportano in modo opposto, costringono le molecole d’acqua ad un flusso in “entrata” anziché in uscita}}
+    
+    \note{L’effetto osservato  è dovuto all'“osmosi”. Si tratta di un fenomeno legato ad una proprietà delle soluzioni (pressione osmotica) che risulta esser colligativa ovvero indipendente dalla natura del soluto e dipendente esclusivamente dalla sua concentrazione (oltre che dalle caratteristiche del solvente e della membrana)}
+    \note{
+    \includegraphics[width=1\linewidth]{image.png}}
+    
+\end{paracol}
+    \summary{la pressione osmotica ($\pi$) é la pressione che occorre applicare ad una soluzione per impedire il fenomeno di osmosi ed é definita come $$\pi=RMT$$ }
+
+\end{document}
